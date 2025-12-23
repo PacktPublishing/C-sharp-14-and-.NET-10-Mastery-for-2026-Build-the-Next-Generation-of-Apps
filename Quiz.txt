@@ -1,0 +1,68 @@
+[Title] OOP Fundamentals Quiz
+[Description] Now that you have learned about the building blocks of object-oriented programming in C# such as classes and objects, fields, properties, methods, constructor and primary constructor, various modifiers and more - let's reinforce all of the lessons with a short quiz.
+
+[Question 1] What allows you to declare a new type that belongs in the class category?
+[Answer 1] classType keyword
+[Explanation] This keyword does not exist.
+
+[Answer 2] You cannot declare new types, only built-in types can be used
+[Explanation] You can create custom types that belong to different categories.
+
+[Answer 3] class keyword (Correct)
+[Explanation] You use class keyword to write a class declaration. This newly declared class is a brand new type that belongs in the class type category.
+
+[Answer 4] object keyword
+[Explanation] There is an object keyword that acts as an alias, but it is used for something completely different. You will learn about it later during the course.
+
+---------
+
+[Question 2] Object is like a blueprint, classes are like items created from the blueprint
+[Answer 1] True
+[Explanation] Recall the car example with a car blueprint and multiple cars created from the blueprint.
+[Answer 2] False (Correct)
+[Explanation] It is the opposite - so class is like a blueprint and objects are like items created from the blueprint.
+
+---------
+
+[Question 3] Can properties be immutable after being set? How?
+[Answer 1] Yes, you can use the immutable keyword
+[Explanation] Properties can be immutable after being set, but immutable keyword does not exist and another one should be used.
+
+[Answer 2] Yes, you can use the init keyword (Correct)
+[Explanation] The init keyword introduced in C# 9 .NET 5 release will allow you to create immutable properties. These are called init-only setters, which allow you to set the property value on initialization, after which they become immutable.
+
+[Answer 3] No, properties are always mutable
+[Explanation] It's possible to make properties immutable in C#. So once a value is assigned during initialization (usually in the constructor), it cannot be changed afterward. It is a specific kind of accessor, which has been introduced in a new .NET/C# release.
+
+[Answer 4] Yes, you add private access modifier to your set accessor 
+[Explanation] This would make the property immutable outside of the class, after it has been initialized through the constructor. But it will still be mutable within the class itself - so it is not entirely immutable. There is a better way.
+
+---------
+
+[Question 4] If you don't create a constructor, will you be provided one by default? What's it called?
+[Answer 1] Yes, it is called a primary constructor
+[Explanation] Yes you will be provided a constructor by default, but it is not called a primary constructor. Primary constructor is a type of constructor with cleaner syntax, introduced in the C# 12 .NET 8 release.
+
+[Answer 2] Yes, it is called a main constructor
+[Explanation] There is no concept in C# language known as a main constructor.
+
+[Answer 3] No, you always need to create a constructor explicitly
+[Explanation] You will be provided a constructor by default, do you remember what its called?
+
+[Answer 4] Yes, it is called a default or implicit constructor
+[Explanation] You will always be provided a default constructor that is simply called a default or sometimes implicit constructor. It is always parameterless, meaning it does not have any parameters.  (Correct)
+ 
+---------
+
+[Question 5] What is the difference between a static and a non-static class?
+[Answer 1] There is no difference, both static and non-static classes behave exactly the same way
+[Explanation] There are very important and distinct differences between how static and non-static classes behave.
+
+[Answer 2] Static class cannot be instantiated, non-static class can be instantiated
+[Explanation] Correct, but there is more to it.
+
+[Answer 3] Static class cannot be instantiated, inherited (you will learn more about this later), requires all class members to be static as well, this keyword is unavailable whereas a non-static class can be instantiated, inherited, doesn't require class members to be static and this keyword is available (Correct)
+[Explanation] Essentially it all comes down to the fact that one accesses class members for static classes from the class itself, without instantiation and inheritance or being able to use this keyword. And one accesses class members for a non-static class from the class instance, after class has been instantiated, inheritance can be used as well along with this keyword, which refers to the instance.
+
+[Answer 4] Static class members are immutable, non-static class members are mutable
+[Explanation] Static modifier on a class or a class member level does not introduce immutability and is not designed for that. There are other ways to introduce immutability.
